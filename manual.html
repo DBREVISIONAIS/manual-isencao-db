@@ -265,6 +265,7 @@
       <a href="https://astrea.net.br/#/main/workspace/%5B,%5D" target="_blank" rel="noopener">Astrea</a>
       <a href="https://cav.receita.fazenda.gov.br/autenticacao/login" target="_blank" rel="noopener">e-CAC</a>
       <a href="https://kndoc.net.br/knmodulo/dashboard.php" target="_blank" rel="noopener">KNDOC</a>
+      <a href="https://gestao-db.streamlit.app/" target="_blank" rel="noopener">Dashboard</a>
       <a href="https://docs.google.com/presentation/d/1Ac4LnzYyxuQtDIHDG9eHEBJFb0cYt5AN/edit?usp=sharing&ouid=104789377842154644577&rtpof=true&sd=true" target="_blank" rel="noopener">Implementação</a>
     </div>
     <p class="dica">Atalho: Ctrl+K. Experimente: pré-descarte, malha fiscal, 90 dias, Astrea, e-CAC, perícia, contracheque, organograma, Guilherme.</p>
@@ -568,6 +569,19 @@
       <li>Não mover card à mão fora das hipóteses previstas nas fichas.</li>
     </ul>
     <div id="slot10"></div>
+  </div>
+
+  <div class="caixa" style="margin-bottom:18px">
+    <h3>Foto de cartão enviada pelo cliente</h3>
+    <p class="sub">Acontece com frequência no acerto de contas, quando se pede a conta para o repasse. A foto do cartão traz muito mais do que o necessário, e o que não é necessário não pode ficar guardado.</p>
+    <ol style="margin:0 0 14px;padding-left:20px">
+      <li style="margin-bottom:6px">Registrar somente os dados indispensáveis ao pagamento: banco, agência, conta, tipo de conta, nome e CPF do titular ou chave Pix.</li>
+      <li style="margin-bottom:6px">Enviar os dados registrados ao cliente e pedir a confirmação expressa.</li>
+      <li style="margin-bottom:6px">Confirmado, pedir que o cliente apague a foto da conversa, preferencialmente pela opção apagar para todos, enquanto ela ainda estiver disponível.</li>
+      <li>Excluir a imagem também dos registros internos: a conversa, a galeria, a pasta de downloads e qualquer outro lugar em que tenha sido salva.</li>
+    </ol>
+    <span class="flag">Nunca anexe a foto do cartão ao card, ao Drive ou ao processo. Número completo, validade e código de segurança não são necessários ao repasse e não podem ser mantidos em lugar nenhum.</span>
+    <p style="margin:0">A mensagem pronta para pedir a confirmação e a exclusão está na aba <b>Textos prontos</b>.</p>
   </div>
 
   <div class="caixa" style="margin-bottom:18px">
@@ -1114,7 +1128,8 @@ const COLUNAS=[
  entrada:"Automática, quando todas as execuções foram encerradas como Pago.",
  auto:["Gera tarefa única com pausa de fluxo","Ao término da tarefa, altera a etapa para Concluído automaticamente"],
  tarefa:["Revisar todas as execuções e confirmar que todas estão como Pago","Verificar documentos pendentes de envio: decisões, comprovantes, laudos e certidões","Verificar se há valores a prestar contas ou ressarcir","Enviar os documentos finais e avisar que o processo foi finalizado","Mover o card para Concluído"],
- saida:"Concluída a tarefa, o caso é encerrado definitivamente."},
+ saida:"Concluída a tarefa, o caso é encerrado definitivamente.",
+ regra:"É nesta fase que chegam os dados bancários para o repasse. Se o cliente mandar foto do cartão, siga o procedimento de registro e exclusão da imagem, descrito na aba Equipe e rotina."},
 
 {k:"negocios",nome:"Consultoria",tipo:"sem",
  entrada:"Movimentação manual. Abriga casos fora do fluxo padrão.",
@@ -1473,6 +1488,9 @@ const MODELOS=[
 {t:"Comunicação de caso sem viabilidade",
  q:"Antes de registrar o motivo de descarte no card. Lembre que preencher esse campo move o card imediatamente.",
  x:"Sr(a). [NOME], analisamos a documentação e o cenário que o(a) senhor(a) nos apresentou.\n\nHoje o caso não reúne os requisitos mínimos que o escritório utiliza para ajuizar a ação com chance real de êxito, pelo seguinte motivo: [MOTIVO OBJETIVO].\n\nCaso surjam novos documentos ou mude alguma circunstância, podemos reavaliar sem custo."},
+{t:"Foto de cartão: confirmação de dados e exclusão",
+ q:"Assim que o cliente enviar foto de cartão. Registre só o necessário, confirme e peça a exclusão na mesma conversa.",
+ x:"Recebemos a foto do cartão e já registramos somente os dados bancários necessários.\n\nPor gentileza, confirme se as informações abaixo estão corretas:\n\nBanco: [BANCO]\nAgência: [AGÊNCIA]\nConta: [CONTA]\nTipo de conta: [CORRENTE OU POUPANÇA]\n\nApós a confirmação, pedimos que apague a foto do cartão da conversa, preferencialmente utilizando a opção \"apagar para todos\", por questão de segurança. Nós também faremos a exclusão da imagem dos nossos registros."},
 {t:"Registro interno da movimentação na tarefa",
  q:"Bate-papo da tarefa, sempre que analisar ou protocolar algo. É o que permite outra pessoa retomar o caso sem você.",
  x:"Movimentação analisada: [RESUMO DO DESPACHO OU DECISÃO]\nProvidência adotada: [O QUE FOI FEITO]\nPeça protocolada em: [DATA] · [PROTOCOLO OU ID]\nPróximo passo: [O QUE FICA PENDENTE E DE QUEM]\nPrazo controlado em: Astrea e controle interno de prazos"}
@@ -1560,6 +1578,7 @@ const LINKS=[
  {g:"Sistemas do dia a dia",itens:[
   ["Bitrix24 · Negócios","Funil principal, onde vive o card-pai de cada caso.","https://dbadv.bitrix24.com.br/crm/deal/list/"],
   ["KNDOC","Cadastro do cliente feito na etapa de onboarding.","https://kndoc.net.br/knmodulo/dashboard.php"],
+  ["Dashboard","Painéis de gestão do escritório, com o acompanhamento dos casos.","https://gestao-db.streamlit.app/"],
   ["Apresentação da implementação","Material de apoio sobre a implementação da isenção junto à fonte pagadora.","https://docs.google.com/presentation/d/1Ac4LnzYyxuQtDIHDG9eHEBJFb0cYt5AN/edit?usp=sharing&ouid=104789377842154644577&rtpof=true&sd=true"],
   ["Astrea","Captura de publicações e controle processual. Cadastre o processo no mesmo dia do protocolo.","https://astrea.net.br/#/main/workspace/%5B,%5D"],
   ["e-CAC · Receita Federal","Malha fiscal, e-processo, retificadoras e acompanhamento da restituição.","https://cav.receita.fazenda.gov.br/autenticacao/login"]
@@ -2014,11 +2033,12 @@ PECAS.forEach(x=>INDICE.push({
   onde:'Prazos e delegação · nome da subtarefa', titulo:x[0], texto:x[1]+' subtarefa estagiária prazo peça',
   ir:()=>irPara('tab-delegacao')
 }));
-[['Fluxo do prazo, da controladoria ao protocolo','analisar prazo subtarefa estagiaria revisar protocolar delegacao controladoria tarefa principal quem faz o que com o prazo'],
+[['Foto de cartão de crédito ou débito','cartao credito debito foto dados bancarios lgpd apagar para todos exclusao imagem seguranca chave pix conta agencia repasse dados para repasse'],
+ ['Fluxo do prazo, da controladoria ao protocolo','analisar prazo subtarefa estagiaria revisar protocolar delegacao controladoria tarefa principal quem faz o que com o prazo'],
  ['Guias e custas judiciais','guia custas planilha vencimento pagamento financeiro comprovante pasta drive taxa judiciaria agravo'],
  ['🔴 REVISAR','revisar subtarefa link google docs responsavel revisao da minuta'],
  ['🟣 PROTOCOLAR','protocolar autorizacao protocolo estagiaria conferencia planilha de prazos']
-].forEach(([t,x])=>INDICE.push({onde:'Prazos e delegação',titulo:t,texto:x,ir:()=>irPara('tab-delegacao')}));
+].forEach(([t,x])=>{const eq=t.startsWith('Foto');INDICE.push({onde:eq?'Equipe e rotina':'Prazos e delegação',titulo:t,texto:x,ir:()=>irPara(eq?'tab-equipe':'tab-delegacao')});});
 DOENCAS.forEach(d=>INDICE.push({
   onde:'Moléstias graves', titulo:d[0], texto:d[1]+' moléstia doença rol isenção',
   ir:()=>{irPara('tab-doencas');filtroD.value=d[0];pintaDoenca(d[0]);}
