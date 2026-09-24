@@ -35,7 +35,11 @@ st.markdown(
 
 def senha_correta() -> str:
     """Lê a senha dos secrets. Sem secret configurado, o app não abre."""
-    return st.secrets.get("SENHA", "")
+    try:
+        return st.secrets.get("SENHA", "")
+    except Exception:
+        # nenhum secrets.toml configurado: o app mostra o aviso em vez de quebrar
+        return ""
 
 
 @st.cache_data(show_spinner=False)
