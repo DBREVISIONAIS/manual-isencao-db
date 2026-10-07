@@ -281,6 +281,7 @@
     <button role="tab" id="tab-delegacao" aria-controls="p-delegacao" aria-selected="false">Prazos e delegação</button>
     <button role="tab" id="tab-prazos" aria-controls="p-prazos" aria-selected="false">Loops automáticos</button>
     <button role="tab" id="tab-equipe" aria-controls="p-equipe" aria-selected="false">Equipe e rotina</button>
+    <button role="tab" id="tab-cliente" aria-controls="p-cliente" aria-selected="false">Contato com o cliente</button>
     <button role="tab" id="tab-arm" aria-controls="p-arm" aria-selected="false">Armadilhas</button>
     <button role="tab" id="tab-dec" aria-controls="p-dec" aria-selected="false">Onde travou?</button>
     <button role="tab" id="tab-mod" aria-controls="p-mod" aria-selected="false">Textos prontos</button>
@@ -610,44 +611,7 @@
     <div id="slot10"></div>
   </div>
 
-  <div class="caixa" style="margin-bottom:18px">
-    <h3>Perícia agendada ou audiência designada</h3>
-    <p class="sub">Sempre que houver perícia marcada ou audiência em que a parte autora precise comparecer. O contato acontece em dois momentos: quando a data é designada e quando ela se aproxima.</p>
-    <h4>Na designação</h4>
-    <ul>
-      <li>Avisar a parte autora assim que a data for designada, sem esperar aproximar.</li>
-      <li>Analisar a documentação médica que já está nos autos e identificar pendência: documento faltando, laudo antigo, exame desatualizado.</li>
-      <li>Havendo pendência, orientar a buscar documentação atualizada com o médico, com tempo hábil antes da data.</li>
-      <li>Registrar no bate-papo da tarefa, no Bitrix, que o contato foi feito e o que foi orientado.</li>
-    </ul>
-    <h4>Antes da perícia ou da audiência</h4>
-    <ul>
-      <li>Ligar para a parte autora. Mensagem escrita confirma data; ligação revela o que ela não entendeu.</li>
-      <li>Perguntar se ela está entendendo o que vai acontecer no dia.</li>
-      <li>Perguntar se já passou por perícia alguma vez. Quem nunca passou chega sem saber o que esperar.</li>
-      <li>Perguntar se precisa de alguma orientação e se vai sozinha ou acompanhada.</li>
-      <li>Confirmar que ela sabe o que levar: documento com foto e todos os laudos, exames e receituários, inclusive os antigos.</li>
-      <li>Registrar o contato no Bitrix, novamente.</li>
-    </ul>
-    <span class="regra">O registro no Bitrix é o que prova que o escritório orientou. Contato feito e não registrado, para o sistema, não aconteceu, e quem assumir o caso depois não tem como saber o que já foi dito.</span>
-    <span class="flag">Perícia perdida por falta de aviso, ou laudo desfavorável por documentação desatualizada que daria para ter providenciado, é prejuízo que nasce dentro do escritório. A SPA Perícia cobra os avisos de data, mas não cobra a análise da documentação nem a ligação: isso depende de você.</span>
-    <p style="margin:0">As mensagens prontas de aviso e de lembrete estão na aba <b>Textos prontos</b>.</p>
-  </div>
-
-  <div class="caixa" style="margin-bottom:18px">
-    <h3>Foto de cartão enviada pelo cliente</h3>
-    <p class="sub">Acontece com frequência no acerto de contas, quando se pede a conta para o repasse. A foto do cartão traz muito mais do que o necessário, e o que não é necessário não pode ficar guardado.</p>
-    <ol style="margin:0 0 14px;padding-left:20px">
-      <li style="margin-bottom:6px">Registrar somente os dados indispensáveis ao pagamento: banco, agência, conta, tipo de conta, nome e CPF do titular ou chave Pix.</li>
-      <li style="margin-bottom:6px">Enviar os dados registrados ao cliente e pedir a confirmação expressa.</li>
-      <li style="margin-bottom:6px">Confirmado, pedir que o cliente apague a foto da conversa, preferencialmente pela opção apagar para todos, enquanto ela ainda estiver disponível.</li>
-      <li>Excluir a imagem também dos registros internos: a conversa, a galeria, a pasta de downloads e qualquer outro lugar em que tenha sido salva.</li>
-    </ol>
-    <span class="flag">Nunca anexe a foto do cartão ao card, ao Drive ou ao processo. Número completo, validade e código de segurança não são necessários ao repasse e não podem ser mantidos em lugar nenhum.</span>
-    <p style="margin:0">A mensagem pronta para pedir a confirmação e a exclusão está na aba <b>Textos prontos</b>.</p>
-  </div>
-
-  <div class="caixa" style="margin-bottom:18px">
+    <div class="caixa" style="margin-bottom:18px">
     <h3>Checklist da semana</h3>
     <p class="sub">Rotina mínima de conferência, criada para cobrir justamente as colunas que não têm monitoramento automático. Os prazos ficam na <a href="https://docs.google.com/spreadsheets/d/19pwYnr_X-U9gON7treHidqlpwqN_YxAOomLEUuHU1Zs/edit?gid=1367984137#gid=1367984137" target="_blank" rel="noopener">planilha de controle de prazos</a>.</p>
     <table>
@@ -686,6 +650,145 @@
     <span class="flag">Regra de captura: tarjar telefone, CPF, credenciais de acesso a portais e qualquer dado bancário antes de inserir a imagem.</span>
     <h4>Controle de versão</h4>
     <p style="margin:0">Versão interativa da 2.0. Reorganização didática do Manual Interno de Operação no Bitrix24 v1.0, sem alteração de conteúdo técnico. Toda mudança de fluxo no portal deve gerar nova versão, com registro do que mudou. Os pontos da aba Armadilhas devem ser revisados antes da versão seguinte, e os que forem corrigidos precisam ser incorporados às fichas das respectivas colunas.</p>
+  </div>
+</section>
+
+<section role="tabpanel" id="p-cliente" aria-labelledby="tab-cliente" hidden>
+  <h2 class="sec">Contato com o cliente</h2>
+  <p class="lede">Tudo que o escritório combina sobre falar com a parte autora: o que avisar, quando ligar, o que registrar e, principalmente, o que você não decide sozinha.</p>
+
+  <span class="flag">A regra que vale acima de todas: nenhuma negociação se resolve no atendimento. Toda e qualquer negociação que a parte autora solicitar precisa ser comunicada antes de qualquer resposta, porque o pedido vai para o Cássio e depende de autorização dele.</span>
+
+  <div class="caixa" style="margin-bottom:18px">
+    <h3>Negociação: comunique, não responda</h3>
+    <p class="sub">Vale para qualquer pedido que mexa em valor, prazo ou forma de pagamento do contrato de honorários.</p>
+    <p style="margin:0 0 12px">Quando a parte autora pedir qualquer condição diferente da contratada, não diga sim, não diga não e não diga que vai ver. Comunique, aguarde a autorização do Cássio e só então retorne à pessoa com a resposta.</p>
+    <table>
+      <thead><tr><th>Pedido típico</th><th>O que fazer</th></tr></thead>
+      <tbody>
+        <tr><th>Pagar as parcelas do contrato de honorários quando receber a restituição</th><td>Comunicar. Não é concessão de atendimento.</td></tr>
+        <tr><th>Desconto no valor contratado</th><td>Comunicar. A política de honorários é institucional.</td></tr>
+        <tr><th>Parcelar em mais vezes do que o contratado</th><td>Comunicar.</td></tr>
+        <tr><th>Adiar vencimento, mudar data ou forma de pagamento</th><td>Comunicar.</td></tr>
+        <tr><th>Qualquer outra alteração de condição contratual</th><td>Comunicar. Na dúvida sobre se é negociação, trate como se fosse.</td></tr>
+      </tbody>
+    </table>
+    <h4>Como comunicar</h4>
+    <ul>
+      <li>Repassar o pedido com as palavras da parte autora, sem interpretar nem suavizar.</li>
+      <li>Informar o contexto: fase do caso, valor envolvido, se há parcela em atraso.</li>
+      <li>Registrar no card que o pedido foi recebido e encaminhado, com a data.</li>
+      <li>Aguardar a autorização antes de retornar. Resposta dada antes da autorização vira compromisso do escritório.</li>
+    </ul>
+    <span class="regra">Enquanto a autorização não vem, a resposta à parte autora é simples e honesta: o pedido foi encaminhado para análise e você retorna assim que tiver a definição. Não dê prazo que não depende de você.</span>
+    <span class="flag">Combinação feita direto com a parte autora, sem autorização, cria obrigação que o escritório vai ter que honrar ou desdizer. Os dois desfechos são ruins.</span>
+    <p style="margin:0">A mensagem pronta para esse retorno está na aba <b>Textos prontos</b>.</p>
+  </div>
+
+  <div class="caixa" style="margin-bottom:18px">
+    <h3>O que nunca se diz ao cliente</h3>
+    <p class="sub">Independentemente de quem pergunta, de como pergunta e de quantas vezes insiste.</p>
+    <ul>
+      <li>Que o caso vai ganhar. Ninguém no escritório garante resultado: quem decide é a Receita ou o Judiciário. O que se garante é condução técnica adequada.</li>
+      <li>Prazo de decisão judicial. O tempo da vara não é nosso e não se promete.</li>
+      <li>Valor que a pessoa vai receber antes do cálculo revisado. Expectativa de restituição é estimativa interna, não promessa.</li>
+      <li>Condição de honorários diferente da contratada, sem autorização.</li>
+      <li>Opinião sobre a conduta do médico, do perito ou do juízo.</li>
+    </ul>
+    <span class="regra">Não saber a resposta é aceitável e se resolve com uma frase: vou confirmar e te retorno. Inventar não se resolve depois.</span>
+  </div>
+
+  <div class="caixa" style="margin-bottom:18px">
+    <h3>Quando ligar e quando escrever</h3>
+    <p class="sub">Mensagem escrita serve de registro. Ligação serve para descobrir o que a pessoa não entendeu.</p>
+    <table>
+      <thead><tr><th>Situação</th><th>Canal</th></tr></thead>
+      <tbody>
+        <tr><th>Primeiro contato do onboarding</th><td>Ligação, com o combinado registrado por escrito depois.</td></tr>
+        <tr><th>Cobrança de documentos</th><td>Mensagem escrita, com a lista. Ligação quando a mensagem não é respondida.</td></tr>
+        <tr><th>Perícia ou audiência designada</th><td>Mensagem com os dados e ligação para confirmar o entendimento.</td></tr>
+        <tr><th>Lembrete de véspera</th><td>Ligação. É o único jeito de saber se a pessoa vai comparecer.</td></tr>
+        <tr><th>Resultado desfavorável</th><td>Ligação sempre. Notícia ruim por escrito, sem contexto, gera pânico e cobrança.</td></tr>
+        <tr><th>Protocolo e andamentos de rotina</th><td>Mensagem escrita.</td></tr>
+        <tr><th>Encerramento do caso</th><td>Mensagem com os documentos finais, precedida de ligação quando houve repasse de valores.</td></tr>
+      </tbody>
+    </table>
+    <h4>Regras da ligação</h4>
+    <ul>
+      <li>A ligação não é gravada. Tudo que for relevante e dito por telefone precisa ser escrito no card no mesmo dia, ou deixa de existir.</li>
+      <li>Perguntar se a pessoa está entendendo, não se ela tem dúvida. Quem não entendeu quase nunca sabe formular a dúvida.</li>
+      <li>Falar devagar e sem termo técnico. Boa parte do público do núcleo é idosa e está doente.</li>
+      <li>Confirmar ao final o que ficou combinado e quem faz o quê.</li>
+    </ul>
+  </div>
+
+  <div class="caixa" style="margin-bottom:18px">
+    <h3>Os momentos em que o contato é obrigatório</h3>
+    <p class="sub">Fora deles, contato é bom senso. Nestes, é procedimento.</p>
+    <table>
+      <thead><tr><th>Momento</th><th>O que comunicar</th></tr></thead>
+      <tbody>
+        <tr><th>Onboarding</th><td>Apresentação, confirmação de dados, explicação do fluxo e dos próximos passos.</td></tr>
+        <tr><th>Documentação pendente</th><td>Lista do que falta e orientação de como obter cada documento.</td></tr>
+        <tr><th>Protocolo da inicial</th><td>Número do processo, vara e aviso de que o acompanhamento é do escritório.</td></tr>
+        <tr><th>Perícia ou audiência designada</th><td>Data, local, o que levar e conferência da documentação médica.</td></tr>
+        <tr><th>Véspera da perícia ou audiência</th><td>Lembrete por ligação e confirmação de comparecimento.</td></tr>
+        <tr><th>Isenção concedida</th><td>Aviso e pedido do contracheque para conferir se a retenção cessou.</td></tr>
+        <tr><th>Crédito recebido</th><td>Dados bancários, acerto de contas e comprovante do repasse.</td></tr>
+        <tr><th>Encerramento</th><td>Documentos finais e confirmação de que o processo acabou.</td></tr>
+        <tr><th>Caso sem viabilidade</th><td>Comunicação transparente, com o motivo objetivo, antes de registrar o descarte.</td></tr>
+      </tbody>
+    </table>
+    <span class="regra">Todo contato entra no bate-papo da tarefa ou no card. O registro é o que permite outra pessoa assumir o caso sem recomeçar a conversa do zero.</span>
+  </div>
+
+<div class="caixa" style="margin-bottom:18px">
+    <h3>Perícia agendada ou audiência designada</h3>
+    <p class="sub">Sempre que houver perícia marcada ou audiência em que a parte autora precise comparecer. O contato acontece em dois momentos: quando a data é designada e quando ela se aproxima.</p>
+    <h4>Na designação</h4>
+    <ul>
+      <li>Avisar a parte autora assim que a data for designada, sem esperar aproximar.</li>
+      <li>Analisar a documentação médica que já está nos autos e identificar pendência: documento faltando, laudo antigo, exame desatualizado.</li>
+      <li>Havendo pendência, orientar a buscar documentação atualizada com o médico, com tempo hábil antes da data.</li>
+      <li>Registrar no bate-papo da tarefa, no Bitrix, que o contato foi feito e o que foi orientado.</li>
+    </ul>
+    <h4>Antes da perícia ou da audiência</h4>
+    <ul>
+      <li>Ligar para a parte autora. Mensagem escrita confirma data; ligação revela o que ela não entendeu.</li>
+      <li>Perguntar se ela está entendendo o que vai acontecer no dia.</li>
+      <li>Perguntar se já passou por perícia alguma vez. Quem nunca passou chega sem saber o que esperar.</li>
+      <li>Perguntar se precisa de alguma orientação e se vai sozinha ou acompanhada.</li>
+      <li>Confirmar que ela sabe o que levar: documento com foto e todos os laudos, exames e receituários, inclusive os antigos.</li>
+      <li>Registrar o contato no Bitrix, novamente.</li>
+    </ul>
+    <span class="regra">O registro no Bitrix é o que prova que o escritório orientou. Contato feito e não registrado, para o sistema, não aconteceu, e quem assumir o caso depois não tem como saber o que já foi dito.</span>
+    <span class="flag">Perícia perdida por falta de aviso, ou laudo desfavorável por documentação desatualizada que daria para ter providenciado, é prejuízo que nasce dentro do escritório. A SPA Perícia cobra os avisos de data, mas não cobra a análise da documentação nem a ligação: isso depende de você.</span>
+    <p style="margin:0">As mensagens prontas de aviso e de lembrete estão na aba <b>Textos prontos</b>.</p>
+  </div>
+
+  <div class="caixa" style="margin-bottom:18px">
+    <h3>Foto de cartão enviada pelo cliente</h3>
+    <p class="sub">Acontece com frequência no acerto de contas, quando se pede a conta para o repasse. A foto do cartão traz muito mais do que o necessário, e o que não é necessário não pode ficar guardado.</p>
+    <ol style="margin:0 0 14px;padding-left:20px">
+      <li style="margin-bottom:6px">Registrar somente os dados indispensáveis ao pagamento: banco, agência, conta, tipo de conta, nome e CPF do titular ou chave Pix.</li>
+      <li style="margin-bottom:6px">Enviar os dados registrados ao cliente e pedir a confirmação expressa.</li>
+      <li style="margin-bottom:6px">Confirmado, pedir que o cliente apague a foto da conversa, preferencialmente pela opção apagar para todos, enquanto ela ainda estiver disponível.</li>
+      <li>Excluir a imagem também dos registros internos: a conversa, a galeria, a pasta de downloads e qualquer outro lugar em que tenha sido salva.</li>
+    </ol>
+    <span class="flag">Nunca anexe a foto do cartão ao card, ao Drive ou ao processo. Número completo, validade e código de segurança não são necessários ao repasse e não podem ser mantidos em lugar nenhum.</span>
+    <p style="margin:0">A mensagem pronta para pedir a confirmação e a exclusão está na aba <b>Textos prontos</b>.</p>
+  </div>
+
+  <div class="caixa">
+    <h3>Dados pessoais na conversa</h3>
+    <p class="sub">O que circula no WhatsApp também é tratamento de dado da parte autora.</p>
+    <ul>
+      <li>Registrar no sistema apenas o dado necessário à finalidade. O resto não se guarda.</li>
+      <li>Não copiar dado sensível do card para fora do sistema, nem imprimir tela com telefone, CPF ou credencial.</li>
+      <li>Não encaminhar documento médico da parte autora para quem não atua no caso.</li>
+      <li>Não subir documento com dado pessoal em ferramenta externa de inteligência artificial.</li>
+    </ul>
+    <span class="flag">Documento médico e dado bancário são os dois materiais mais sensíveis que o núcleo manuseia. Tratar com descuido é risco para a pessoa e para o escritório.</span>
   </div>
 </section>
 
@@ -1198,7 +1301,7 @@ const COLUNAS=[
  auto:["Gera tarefa única com pausa de fluxo","Ao término da tarefa, altera a etapa para Concluído automaticamente"],
  tarefa:["Revisar todas as execuções e confirmar que todas estão como Pago","Verificar documentos pendentes de envio: decisões, comprovantes, laudos e certidões","Verificar se há valores a prestar contas ou ressarcir","Enviar os documentos finais e avisar que o processo foi finalizado","Mover o card para Concluído"],
  saida:"Concluída a tarefa, o caso é encerrado definitivamente.",
- regra:"É nesta fase que chegam os dados bancários para o repasse. Se o cliente mandar foto do cartão, siga o procedimento de registro e exclusão da imagem, descrito na aba Equipe e rotina."},
+ regra:"É nesta fase que chegam os dados bancários para o repasse. Se o cliente mandar foto do cartão, siga o procedimento de registro e exclusão da imagem, descrito na aba Contato com o cliente."},
 
 {k:"negocios",nome:"Consultoria",tipo:"sem",
  entrada:"Movimentação manual. Abriga casos fora do fluxo padrão.",
@@ -1383,7 +1486,7 @@ const COLUNAS=[
  auto:["Solicitação de Resultado da Perícia com duas saídas"],
  tarefa:["Avisar a parte autora da data da perícia e, no mesmo contato, conferir a documentação médica e perguntar se ela já passou por perícia antes, se tem dúvida e se vai sozinha","Avisar quando faltar uma semana","Avisar quando faltar um dia, com pausa de fluxo, por telefone","Informar o resultado da perícia","Registrar no bate-papo da tarefa cada contato feito, com data e o que foi orientado"],
  saida:"Aprovada leva a Bem sucedido. Negada leva a Impugnação de Laudo.",
- regra:"Na designação, não basta avisar a data. Analise a documentação médica, verifique se há pendência e se é caso de buscar laudo ou exame atualizado, e ligue para a parte autora para confirmar que ela entendeu o que vai acontecer. O passo a passo está na aba Equipe e rotina.",
+ regra:"Na designação, não basta avisar a data. Analise a documentação médica, verifique se há pendência e se é caso de buscar laudo ou exame atualizado, e ligue para a parte autora para confirmar que ela entendeu o que vai acontecer. O passo a passo está na aba Contato com o cliente.",
  flag:"Impugnação de Laudo não consta entre as cinco colunas da SPA, cujas terminais são Bem sucedido e Mal sucedido. Antes de registrar resultado negativo, confirme com a supervisão: o roteamento pode apontar para destino inexistente."},
 
 {k:"pericia",nome:"Bem sucedido e Mal sucedido",tipo:"sem",
@@ -1578,6 +1681,9 @@ const MODELOS=[
 {t:"Controladoria: prazo em aguarda já aberto",
  q:"No grupo da Controladoria, quando você identificar que o prazo abriu e a planilha ainda não foi atualizada.",
  x:"O prazo do processo [NÚMERO] já abriu e ainda está como aguarda na planilha.\n\nIntimação publicada em: [DATA]\nFatal, pela minha contagem: [DATA]\n\nPode atualizar a planilha e o Bitrix com a data do fatal, por favor?"},
+{t:"Pedido de negociação: retorno enquanto aguarda autorização",
+ q:"Assim que a parte autora pedir desconto, parcelamento, pagamento na restituição ou qualquer condição diferente da contratada. Envie isso e encaminhe o pedido, sem adiantar resposta.",
+ x:"Sr(a). [NOME], recebi o seu pedido sobre [RESUMO DO PEDIDO].\n\nVou encaminhar para análise da nossa coordenação, porque condições de pagamento diferentes das previstas em contrato não são definidas por mim.\n\nAssim que eu tiver a definição, retorno ao(à) senhor(a) por aqui. Enquanto isso, seguimos normalmente com o andamento do processo."},
 {t:"Registro interno da movimentação na tarefa",
  q:"Bate-papo da tarefa, sempre que analisar ou protocolar algo. É o que permite outra pessoa retomar o caso sem você.",
  x:"Movimentação analisada: [RESUMO DO DESPACHO OU DECISÃO]\nProvidência adotada: [O QUE FOI FEITO]\nPeça protocolada em: [DATA] · [PROTOCOLO OU ID]\nPróximo passo: [O QUE FICA PENDENTE E DE QUEM]\nPrazo controlado em: Astrea e controle interno de prazos"}
@@ -2121,7 +2227,11 @@ PECAS.forEach(x=>INDICE.push({
   onde:'Prazos e delegação · nome da subtarefa', titulo:x[0], texto:x[1]+' subtarefa estagiária prazo peça',
   ir:()=>irPara('tab-delegacao')
 }));
-[['Controladoria: protocolo até as 15h, aguarda e fechamento','controladoria carol estagiaria prazo fatal 15h protocolo aguarda planilha fechado sim pje intimacao decurso de prazo segunda conferencia responder grupo expediente 16h'],
+[['Negociação pedida pelo cliente','negociacao desconto parcelamento parcelas honorarios contrato pagar na restituicao condicao diferente autorizacao cassio comunicar antes nao decidir sozinha'],
+ ['Quando ligar e quando escrever','ligacao telefone whatsapp mensagem canal contato cliente parte autora registro bate-papo notícia ruim vespera'],
+ ['O que nunca se diz ao cliente','prometer resultado garantia prazo valor expectativa opiniao perito juizo honorarios'],
+ ['Momentos em que o contato é obrigatório','contato obrigatorio onboarding documentacao protocolo pericia audiencia isencao concedida credito encerramento descarte'],
+ ['Controladoria: protocolo até as 15h, aguarda e fechamento','controladoria carol estagiaria prazo fatal 15h protocolo aguarda planilha fechado sim pje intimacao decurso de prazo segunda conferencia responder grupo expediente 16h'],
  ['Cadastramento da Dutra Bitencourt no TJSP','tjsp requisitorio cadastramento sociedade honorarios contratuais pessoa juridica cumprimento de sentenca distribuicao peticionar precatorio rpv'],
  ['Perícia agendada ou audiência designada','pericia audiencia aviso cliente ligacao documentacao medica laudo atualizado orientar comparecer designacao contato registrar no bitrix'],
  ['Foto de cartão de crédito ou débito','cartao credito debito foto dados bancarios lgpd apagar para todos exclusao imagem seguranca chave pix conta agencia repasse dados para repasse'],
@@ -2129,7 +2239,7 @@ PECAS.forEach(x=>INDICE.push({
  ['Guias e custas judiciais','guia custas planilha vencimento pagamento financeiro comprovante pasta drive taxa judiciaria agravo'],
  ['🔴 REVISAR','revisar subtarefa link google docs responsavel revisao da minuta'],
  ['🟣 PROTOCOLAR','protocolar autorizacao protocolo estagiaria conferencia planilha de prazos']
-].forEach(([t,x])=>{const aba=t.startsWith('Controladoria')?'tab-delegacao':t.startsWith('Cadastramento')?'tab-jornada':((t.startsWith('Foto')||t.startsWith('Perícia agendada'))?'tab-equipe':'tab-delegacao');const nome={'tab-jornada':'A jornada do caso','tab-equipe':'Equipe e rotina','tab-delegacao':'Prazos e delegação'}[aba];INDICE.push({onde:nome,titulo:t,texto:x,ir:()=>{irPara(aba);if(aba==='tab-jornada')abrir(6);}});});
+].forEach(([t,x])=>{const cli=['Negociação','Quando ligar','O que nunca','Momentos em que','Foto','Perícia agendada'].some(x=>t.startsWith(x));const aba=cli?'tab-cliente':(t.startsWith('Controladoria')?'tab-delegacao':(t.startsWith('Cadastramento')?'tab-jornada':'tab-delegacao'));const nome={'tab-jornada':'A jornada do caso','tab-cliente':'Contato com o cliente','tab-delegacao':'Prazos e delegação'}[aba];INDICE.push({onde:nome,titulo:t,texto:x,ir:()=>{irPara(aba);if(aba==='tab-jornada')abrir(6);}});});
 DOENCAS.forEach(d=>INDICE.push({
   onde:'Moléstias graves', titulo:d[0], texto:d[1]+' moléstia doença rol isenção',
   ir:()=>{irPara('tab-doencas');filtroD.value=d[0];pintaDoenca(d[0]);}
@@ -2179,8 +2289,9 @@ function buscar(){
   botLimpa.hidden=q.length===0;
   if(q.length<2){limparBusca(false);return}
   const termo=semAcento(q);
-  const res=INDICE.filter(x=>x.busca.includes(termo))
-    .sort((a,b)=>semAcento(a.titulo).includes(termo)? -1 : semAcento(b.titulo).includes(termo)?1:0);
+  const peso=x=>semAcento(x.titulo).includes(termo)?0:(semAcento(x.onde).includes(termo)?1:2);
+  const pos=x=>{const i=semAcento(x.texto).indexOf(termo);return i<0?9999:i};
+  const res=INDICE.filter(x=>x.busca.includes(termo)).sort((a,b)=>peso(a)-peso(b)||pos(a)-pos(b));
   document.querySelectorAll('main > section').forEach(s=>s.hidden=true);
   document.querySelectorAll('nav.abas button').forEach(x=>x.setAttribute('aria-selected','false'));
   secBusca.hidden=false;
